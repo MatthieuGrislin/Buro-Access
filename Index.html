@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buro'Access</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg">
+      <a class="navbar-brand" href="#"><img src="assets/img/logo.png" id="logo" alt="Buro'Access logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><img src="assets/img/burger.png" alt=""></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="HideAndShow('0')">Accueil</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="HideAndShow('1')">Papeterie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="HideAndShow('2')">Classement/Archive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="HideAndShow('3')">Ecriture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="HideAndShow('4')">Petites fournitures</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Panier</a>
+            </li>
+         </ul>
+      </div>
+    </nav>
+    <section id="accueil">
+      <p>Bienvenue chez Buro'Access</p>
+    </section>
+    <section id="stationery">
+      <div id="claireFontaine">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/rametteClaireFontaine.jpg" title="rametteClaireFontaine" alt="rametteClaireFontaine"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Papier Clairefontaine A4 80 g/m² Blanc Clairalfa - 5 Paquets de 500 Feuilles</p>
+            <p>Référence : 0006804</p>
+            <p>Le papier le plus vendu en France
+              Papier Clairefontaine A4 80 g/m² Blanc Clairalfa - 5 Paquets de 500 Feuilles
+              Bénéfices : Notoriété, Fiabilité, Extra blanc, Certification PEFC.
+              Impressions : Noir et Blanc & couleur.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>26,34 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="rametteOfficeDepot">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/rametteDePapier.jpg" title="rametteDePapier" alt="rametteDePapier"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Papier Office Depot A4 80 g/m² Blanc Everyday - 500 Feuilles</p>
+            <p>Référence : 1453759</p>
+            <p>Des impressions quotidiennes de qualité
+              Le papier A4 blanc Everyday de Office Depot est pratique et économique pour de gros volumes d’impression en noir et blanc.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>4,79 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="cartonOfficeDepot">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/cartonRametteDePapier.jpg" title="cartonRametteDePapier" alt="cartonRametteDePapier"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Papier Office Depot A4 80 g/m² Blanc Everyday - 5 Paquets de 500 Feuilles</p>
+            <p>Référence : 0391110</p>
+            <p>Matériel : Compatible avec toutes les marques d’imprimantes jet d’encre, laser et copieurs 
+              Gros volume d’impression</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>21,54 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="ReyProDesign">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/rametteProDesign.jpg" title="rametteProDesign" alt="rametteProDesign"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Papier Blanc Rey Pro Design A4 100 g/m² - 500 Feuilles</p>
+            <p>Référence : 5296554</p>
+            <p>Une excellente opacité pour réaliser des impression recto / verso optimales.
+              Compatible avec tout type d'équipement de bureau, le papier blanc Rey Pro Design A4 100 g/m² assure des impressions noir et blanc et couleurs de qualité professionnelle. Vous obtiendrez un rendu de couleurs éclatant, ainsi que des contrastes soutenus</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>10,43 € TTC</p>
+          <div class="row">
+            <label class="col-6" for="quantity">Quantités : </label>
+            <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+          </div>
+            <button type="button">Ajouter au panier</button>
+        </div>
+      </div>
+    </section>
+    <section id="archive">
+      <div id="classeurs">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/lotClasseurs.jpg" title="lotClasseurs" alt="lotClasseurs"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Classeurs à levier Exacompta 2 anneaux PP, Papier A4 Assortiment 3 Unités</p>
+            <p>Référence : 1056101</p>
+            <p>Ce pack de 3 classeurs à levier à prix défiant toute concurrence vous permettra de classer vos documents A4</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>4,31 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="boitesArchive">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/lotBoites.jpg" title="lotBoitesArchive" alt="lotBoitesArchive"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Boîte d'archives Office Depot A4 Assortiment - 12 Unités</p>
+            <p>Référence : 4853808</p>
+            <p>Avec œillets de préhension pour un classement vertical ou horizontal.
+              Pour le stockage ou l’archivage à longue durée de tous vos documents, dossiers, brochures ou listings, la boîte d’archives Office Depot s’adapte à chaque besoin du quotidien.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>12,59 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="chemises">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/lotChemises.jpg" title="lotChemises" alt="lotChemises" />
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Chemise 3 rabats à élastique Exacompta Carte lustrée véritable A4 425 g/m² Assortiment 10 Unités</p>
+            <p>Référence : 6350346</p>
+            <p>Un excellent rapport qualité/prix !
+              Une chemise à rabats Exacompta est un outil idéal pour vous aider dans vos efforts de classement. Sa qualité lui confère une fiabilité précieuse.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>11,75 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="pochette">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/lotPochettes.jpg" title="lotPochettes" alt="lotPochettes"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Pochettes perforées Exacompta Polypropylène Cristal 10 Unités</p>
+            <p>Référence : 5961087 </p>
+            <p>Des pochettes perforées de qualité, conçues pour tenir plusieurs formes de média</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>17,88 € TTC</p>
+          <div class="row">
+            <label class="col-6" for="quantity">Quantités : </label>
+            <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+          </div>
+            <button type="button">Ajouter au panier</button>
+        </div>
+      </div>
+    </section>
+    <section id="pen">
+      <div id="4ColorFluo">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/styloFluo.jpg" title="styloFluo" alt="styloFluo"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Stylo à bille rétractable BIC 4 Colours Fluo 0.4 mm Assortiment - 12 Unités</p>
+            <p>Référence : 4568208</p>
+            <p>Avec ce stylo bille 3 couleurs et mini surligneur Bic multifonctions, gardez toujours à portée de main l'essentiel de l'écriture et du surlignage… en un clic !</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>29,88 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="4Color">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/stylo4Couleur.jpg" title="stylo4Couleur" alt="stylo4Couleur"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Stylo à bille rétractable BIC 4 Couleurs 0.32 mm Assortiments</p>
+            <p>Référence : 7792563</p>
+            <p>Profitez de la liberté de quatre couleurs d'encre différentes dans un seul stylo avec le stylo à bille Bic 4 Colours Pro.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>3,83 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="styloPaperMate">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/styloPaperMate.jpg" title="styloPaperMate" alt="styloPaperMate"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Stylo à bille Paper Mate B045 0.5 mm Assortiment - 8 Unités</p>
+            <p>Référence : 1060111</p>
+            <p>L’incontournable de l’écriture en format économique !</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>1,79 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="styloBic">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/bic20Stylo.jpg" title="bic20Stylo" alt="bic20Stylo"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Stylo à bille BIC Cristal 0.30 mm - 20 Unités</p>
+            <p>Référence : 9206965</p>
+            <p>Lot de 20 stylos à bille, pointe fine, non rétractable Bic Cristal Original, coloris assortis essentiels : noir, bleu, rouge et vert.
+              Pointe fine 0,8 mm qui glisse sur le papier avec un confort d'écriture inégalé.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>8,75 € TTC</p>
+          <div class="row">
+            <label class="col-6" for="quantity">Quantités : </label>
+            <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+          </div>
+            <button type="button">Ajouter au panier</button>
+        </div>
+      </div>
+    </section>
+    <section id="supplies">
+      <div id="scotch">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/dévidoir.jpg" title="dévidoir" alt="dévidoir"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Dévidoir avec 1 ruban adhésif Scotch C60 Base Antidérapante Argenté, noir</p>
+            <p>Référence : 5019129</p>
+            <p>Un pack complet avec un adhésif invisible qui permet la réécriture.
+              Le dévidoir de ruban adhésif C60 de Scotch® affiche un boitier en plastique robuste au design moderne qui allie style, qualité et performance et s’utilise aussi bien à la maison qu’au bureau pour tous vos besoins du quotidien.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>8,27 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="stapler">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/agrafeuse.jpg" title="agrafeuse" alt="agrafeuse"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Agrafeuse Niceday 5665 20 Feuilles Noir</p>
+            <p>Référence : 5622624</p>
+            <p>Agrafez les documents éparpillés sur votre bureau avec cette agrafeuse à demi-bande de Niceday : elle vous permettra d'agrafer jusqu'à 20 feuilles à la fois !</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>5,39 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="styloPaperMate">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/styloPaperMate.jpg" title="styloPaperMate" alt="styloPaperMate"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Ciseaux Office Depot Softgrip Noir, Gris 150 mm</p>
+            <p>Référence : 5620104</p>
+            <p>Coupez et découpez avec précision et confort.
+              Des ciseaux en acier fin Office Depot Softgrip à manche spécialement étudié pour droitiers comme gauchers, pour couper avec précision sans inconfort pour vos mains.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>7,43 € TTC</p>
+            <div class="row">
+              <label class="col-6" for="quantity">Quantités : </label>
+              <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+            </div>
+            <button type="button">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+      <div id="paperClips">
+        <div class="row">
+          <figure class="col-12 col-md-3 col-lg-3 text-center">
+            <img src="assets/img/trombones.jpg" title="trombones" alt="trombones"/>
+          </figure>
+          <div class="col-12 col-md-6 col-lg-6 text-center">
+            <p>Trombones Office Depot 3 cm Argenté - 100 Unités</p>
+            <p>Référence : 3061951</p>
+            <p>Un accessoire de bureau pratique pour classer facilement tous vos documents.
+              Réalisés en métal, zinc robuste, les trombones Office DEPOT® sont pratique au quotidien pour assembler ou classer tous vos documents sans trou, ni perforation.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 text-center">
+            <p>1,19 € TTC</p>
+          <div class="row">
+            <label class="col-6" for="quantity">Quantités : </label>
+            <input class="col-6" type="number" id="quantity" placeholder="ex : 3" />
+          </div>
+            <button type="button">Ajouter au panier</button>
+        </div>
+      </div>
+    </section> 
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 ">
+              <p class="retrouverNous ">Retrouver nous sur :</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <a href="#"><img src="assets/img/facebookSquareBrands.png" class="logo-footer" alt="facebook"></a> 
+            <a href="#"><img src="assets/img/twitterSquareBrands.png" class="logo-footer" alt="twitter logo"></a>
+          </div>
+          <div class="col-8 text-right">
+            <a href="#"><img class="logo-footer" src="assets/img/ccMastercardBrands.png" alt="mastercard"></a>   
+            <a href="#"><img class="logo-footer" src="assets/img/ccVisaBrands.png" alt="visa"></a>  
+            <a href="#"><img class="logo-footer" src="assets/img/ccPaypalBrands.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
