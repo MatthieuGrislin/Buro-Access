@@ -74,9 +74,6 @@ section {
     margin-bottom: 45px;
     margin-top: 15px;
 }
-button{
-    margin-top: 10px;
-}
 .price {
     font-weight: bold;
 }
@@ -93,8 +90,8 @@ font-size: 20px;
     font-size: 20px;  
 }
 .displayProduct {
-    height: 150px;
-    width: 150px;
+    height: 490px;
+    width: 490px;
     margin: 0 auto;
 }
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -114,3 +111,19 @@ font-size: 20px;
 .modal-body .modal-item {
     display: none;
 }
+.textIndex {
+    margin-top: 30px;
+}
+.titreIndex {
+    margin-bottom: 30px;
+}
+#basketIcon {
+    height: auto;
+    width: 50px;
+}
+/*@media screen and (max-width: 374px){
+    .displayProduct {
+        height: 150px;
+        width: 150px;
+    }
+}*/

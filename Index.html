@@ -31,28 +31,26 @@
                     <a class="nav-link" href="#" onclick="HideAndShow('4')">Petites fournitures</a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">Panier</button>
+                    <button type="button" class="btn text-center" data-toggle="modal" data-target="#exampleModal"><img src="assets/img/basket.png" id="basketIcon" /></button>
                 </li>
             </ul>
         </div>
     </nav>
     <section class="container" id="accueil">
-
-        <p>Bienvenue chez Buro'Access</p>
+        <h1 class="text-center titreIndex">Bienvenue chez Buro'Access</h1>
         <div class="row promo">
-
         </div>
         <div class="row displayProduct">
             <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block" src="assets/img/rametteClaireFontaine.jpg" alt="Rammette Papier">
+                        <img class="d-block" src="assets/img/ClaireFontaineRamette.jpg" alt="Ramette Papier">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block" src="assets/img/lotBoites.jpg" alt="Second slide">
+                        <img class="d-block" src="assets/img/bic4Color.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block" src="assets/img/styloPaperMate.jpg" alt="Third slide">
+                        <img class="d-block" src="assets/img/agrafeuseCarousel.jpg" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -65,8 +63,10 @@
                 </a>
             </div>
         </div>
+        <h2 class="text-center textIndex">Buro'Access est une entreprise familiale qui se veut aussi proche des particuliers que des professionnels.</h2>
+        <h2 class="text-center">Nous vous fournissons un grand choix de produits et d'accessoires pour les besoins du quotidien de toutes les entreprises.</h2>
+        <h2 class="text-center">Buro'Access c'est avant tout du choix, de la qualité et des prix bas toute l'année.</h2>
     </section>
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -78,9 +78,6 @@
                     </button>
                 </div>
                 <div class="modal-body">
-
-
-
                     <div id="claireFontaine" class="modal-item">
                         <div class="row">
                             <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -347,8 +344,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div id="cutter" class="modal-item">
                         <div class="row">
                             <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -387,8 +382,6 @@
                             </div>
                         </div>
                     </div>
-    
-
                 </div>
                 <div class="modal-footer">
                     <div class="row">
@@ -401,7 +394,6 @@
         </div>
     </div>
     <!-- fin modal -->
-
     <section id="stationery">
         <div id="claireFontaine">
             <div class="row">
@@ -420,12 +412,11 @@
                         <label class="col-6" for="quantity">Quantités :</label>
                         <input type="number" name="claireFontaine" id="claireFontaineNumber">
                     </div>
-                    <button type="button"  onclick="addBasket('claireFontaine', 'claireFontaineNumber', 'claireFontainenumberBasket', 'claireFontainePrice', 26.34)">Ajouter au panier</button>
+                    <button type="button"  onclick="addBasket('claireFontaine', 'claireFontaineNumber', 'claireFontainenumberBasket', 'claireFontainePrice', 26.34), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="rametteOfficeDepot">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -442,12 +433,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="rametteOfficeDepot" id="rametteOfficeDepoteNumber">
                     </div>
-                    <button type="button" onclick="addBasket('rametteOfficeDepot', 'rametteOfficeDepoteNumber' , 'rametteOfficeDepotnumberBasket', 'rametteOfficeDepotPrice', 4.79)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('rametteOfficeDepot', 'rametteOfficeDepoteNumber' , 'rametteOfficeDepotnumberBasket', 'rametteOfficeDepotPrice', 4.79), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="cartonOfficeDepot">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -464,12 +454,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="cartonOfficeDepot" id="cartonOfficeDepotNumber">
                     </div>
-                    <button type="button" onclick="addBasket('cartonOfficeDepot', 'cartonOfficeDepotNumber' , 'cartonOfficeDepotnumberBasket', 'cartonOfficeDepotPrice', 21.54)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('cartonOfficeDepot', 'cartonOfficeDepotNumber' , 'cartonOfficeDepotnumberBasket', 'cartonOfficeDepotPrice', 21.54), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="ReyProDesign">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -487,12 +476,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="ReyProDesign" id="ReyProDesignNumber">
                     </div>
-                    <button type="button" onclick="addBasket('ReyProDesign', 'ReyProDesignNumber' , 'ReyProDesignnumberBasket', 'ReyProDesignPrice', 10.43)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('ReyProDesign', 'ReyProDesignNumber' , 'ReyProDesignnumberBasket', 'ReyProDesignPrice', 10.43), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="archive">
         <div id="classeurs">
             <div class="row">
@@ -509,12 +497,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="classeurs" id="classeursNumber">
                     </div>
-                    <button type="button" onclick="addBasket('classeurs', 'classeursNumber' , 'classeursnumberBasket', 'classeursPrice', 4.31)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('classeurs', 'classeursNumber' , 'classeursnumberBasket', 'classeursPrice', 4.31), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="archiveBox">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -531,12 +518,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="archiveBox" id="archiveBoxNumber">
                     </div>
-                    <button type="button" onclick="addBasket('archiveBox', 'archiveBoxNumber' , 'archiveBoxBasket', 'archiveBoxPrice', 12.59)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('archiveBox', 'archiveBoxNumber' , 'archiveBoxBasket', 'archiveBoxPrice', 12.59), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="folder">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -553,12 +539,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="folder" id="folderNumber">
                     </div>
-                    <button type="button" onclick="addBasket('folder', 'folderNumber' , 'foldernumberBasket', 'folderPrice', 11.75)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('folder', 'folderNumber' , 'foldernumberBasket', 'folderPrice', 11.75), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="sleeve">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -574,12 +559,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="sleeve" id="sleeveNumber">
                     </div>
-                    <button type="button" onclick="addBasket('sleeve', 'sleeveNumber' , 'sleeveBasket', 'sleevePrice', 17.28)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('sleeve', 'sleeveNumber' , 'sleeveBasket', 'sleevePrice', 17.28), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="pen">
         <div id="4ColorFluo">
             <div class="row">
@@ -596,12 +580,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="pen" id="4ColorFluoNumber">
                     </div>
-                    <button type="button" onclick="addBasket('4ColorFluo', '4ColorFluoNumber' , '4ColorFluoBasket', '4ColorFluoPrice', 29.88)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('4ColorFluo', '4ColorFluoNumber' , '4ColorFluoBasket', '4ColorFluoPrice', 29.88), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="4Color">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -617,12 +600,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="4Color" id="4ColorNumber">
                     </div>
-                    <button type="button" onclick="addBasket('4Color', '4ColorNumber' , '4ColorBasket', '4ColorPrice', 3.83)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('4Color', '4ColorNumber' , '4ColorBasket', '4ColorPrice', 3.83), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="styloPaperMate">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -638,12 +620,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="styloPaperMate" id="styloPaperMateNumber">
                     </div>
-                    <button type="button" onclick="addBasket('styloPaperMate', 'styloPaperMateNumber' , 'styloPaperMatenumberBasket', 'styloPaperMatePrice', 1.79)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('styloPaperMate', 'styloPaperMateNumber' , 'styloPaperMatenumberBasket', 'styloPaperMatePrice', 1.79), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="styloBic">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -660,12 +641,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="styloBic" id="styloBicNumber">
                     </div>
-                    <button type="button" onclick="addBasket('styloBic', 'styloBicNumber' , 'styloBicnumberBasket', 'styloBicPrice', 8.75)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('styloBic', 'styloBicNumber' , 'styloBicnumberBasket', 'styloBicPrice', 8.75), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="supplies">
         <div id="scotch">
             <div class="row">
@@ -683,12 +663,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="scotch" id="scotchNumber">
                     </div>
-                    <button type="button" onclick="addBasket('scotch', 'scotchNumber' , 'scotchnumberBasket', 'scotchPrice', 8.27)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('scotch', 'scotchNumber' , 'scotchnumberBasket', 'scotchPrice', 8.27), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="stapler">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -705,12 +684,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="stapler" id="staplerNumber">
                     </div>
-                    <button type="button" onclick="addBasket('stapler', 'staplerNumber' , 'staplernumberBasket', 'staplerPrice', 5.39)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('stapler', 'staplerNumber' , 'staplernumberBasket', 'staplerPrice', 5.39), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="cutter">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -727,12 +705,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="cutter" id="cutterNumber">
                     </div>
-                    <button type="button" onclick="addBasket('cutter', 'cutterNumber' , 'cutternumberBasket', 'cutterPrice', 7.43)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('cutter', 'cutterNumber' , 'cutternumberBasket', 'cutterPrice', 7.43), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
-
         <div id="paperClips">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -749,12 +726,11 @@
                         <label class="col-6" for="quantity">Quantités : </label>
                         <input type="number" name="paperClips" id="paperClipsNumber">
                     </div>
-                    <button type="button" onclick="addBasket('paperClips', 'paperClipsNumber' , 'paperClipsnumberBasket', 'paperClipsPrice', 1.19)">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('paperClips', 'paperClipsNumber' , 'paperClipsnumberBasket', 'paperClipsPrice', 1.19), changeBorder(this)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container-fluid">
             <div class="row">
