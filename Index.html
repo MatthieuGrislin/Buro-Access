@@ -18,7 +18,7 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#" onclick="HideAndShow('0')">Accueil</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#" onclick="HideAndShow('1')">Papeterie</a>
                 </li>
                 <li class="nav-item">
@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#" onclick="HideAndShow('4')">Petites fournitures</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Panier</a>
+                    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">Panier</button>
                 </li>
             </ul>
         </div>
@@ -67,6 +67,87 @@
         </div>
 
     </section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Panier</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="claireFontaine">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/rametteDePapier.jpg" title="rametteOfficeDepot" alt="rametteOfficeDepot" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Papier Office Depot A4 80 g/m² Blanc Everyday - 5 Paquets de 500 Feuilles</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label class="" for="quantity">Quantités :</label>
+                                    <select id="claireFontaineQuantity" class="" name="claireFontaineQuantity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <button class="btn">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <span class="price"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="claireFontaine">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/rametteClaireFontaine.jpg" title="rametteClaireFontaine" alt="rametteClaireFontaine" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Papier Clairefontaine A4 80 g/m² Blanc Clairalfa - 5 Paquets de 500 Feuilles</h1>
+                                <p><small>Référence : 0006804 </small></p>
+                                <p>
+                                    <label class="" for="quantity">Quantités :</label>
+                                    <select id="claireFontaineQuantity" class="" name="claireFontaineQuantity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <button class="btn">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <span class="price"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Supprimer le panier</button>
+                    <button type="button" class="btn btn-primary">Valider le panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="stationery">
         <div id="claireFontaine">
