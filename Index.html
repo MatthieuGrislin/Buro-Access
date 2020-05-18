@@ -65,8 +65,8 @@
                 </a>
             </div>
         </div>
-
     </section>
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -78,39 +78,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div id="claireFontaine">
-                        <div class="row">
-                            <figure class="col-12 col-md-3 col-lg-3 text-center">
-                                <img src="assets/img/rametteDePapier.jpg" title="rametteOfficeDepot" alt="rametteOfficeDepot" />
-                            </figure>
-                            <div class="col-12 col-md-6 col-lg-6">
-                                <h1>Papier Office Depot A4 80 g/m² Blanc Everyday - 5 Paquets de 500 Feuilles</h1>
-                                <p><small>Référence : 0391110 </small></p>
-                                <p>
-                                    <label class="" for="quantity">Quantités :</label>
-                                    <select id="claireFontaineQuantity" class="" name="claireFontaineQuantity">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                    <button class="btn">Supprimer</button>
-                                </p>
-                            </div>
-                            <div class="col-12 col-md-3 col-lg-3 text-right">
-                                <p>Prix TTC : <span class="price"></span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div id="claireFontaine">
+
+
+
+                    <div id="claireFontaine" class="modal-item">
                         <div class="row">
                             <figure class="col-12 col-md-3 col-lg-3 text-center">
                                 <img src="assets/img/rametteClaireFontaine.jpg" title="rametteClaireFontaine" alt="rametteClaireFontaine" />
@@ -119,35 +90,317 @@
                                 <h1>Papier Clairefontaine A4 80 g/m² Blanc Clairalfa - 5 Paquets de 500 Feuilles</h1>
                                 <p><small>Référence : 0006804 </small></p>
                                 <p>
-                                    <label class="" for="quantity">Quantités :</label>
-                                    <select id="claireFontaineQuantity" class="" name="claireFontaineQuantity">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                    <button class="btn">Supprimer</button>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="claireFontainenumberBasket" onkeyup="totalPrice('claireFontainenumberBasket', 'claireFontainePrice', 26.34)">
+                                    <button class="btn" onclick="deleteItem('claireFontaine')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
-                                <p>Prix TTC : <span class="price"></span></p>
+                                <p>Prix TTC : <strong><span id="claireFontainePrice" class="amount"></span> €</strong></p>
                             </div>
                         </div>
                     </div>
+                    <div id="rametteOfficeDepot" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/rametteDePapier.jpg" title="rametteOfficeDepot" alt="rametteOfficeDepot" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Papier Office Depot A4 80 g/m² Blanc Everyday - 500 Feuilles</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="rametteOfficeDepotnumberBasket" onkeyup="totalPrice('rametteOfficeDepotnumberBasket', 'rametteOfficeDepotPrice', 4.79)">
+                                    <button class="btn" onclick="deleteItem('rametteOfficeDepot')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="rametteOfficeDepotPrice" class="amount"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cartonOfficeDepot" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/cartonRametteDePapier.jpg" title="cartonRametteDePapier" alt="cartonRametteDePapier" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                               <h1>Papier Office Depot A4 80 g/m² Blanc Everyday - 5 Paquets de 500 Feuilles</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="cartonOfficeDepotnumberBasket" onkeyup="totalPrice('cartonOfficeDepotnumberBasket', 'cartonOfficeDepotPrice', 21.54)">
+                                    <button class="btn" onclick="deleteItem('cartonOfficeDepot')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="cartonOfficeDepotPrice" class="amount" ></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ReyProDesign" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/rametteProDesign.jpg" title="ReyProDesign" alt="ReyProDesign" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Papier Blanc Rey Pro Design A4 100 g/m² - 500 Feuilles</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="ReyProDesignnumberBasket" onkeyup="totalPrice('ReyProDesignnumberBasket', 'ReyProDesignPrice', 10.43)">
+                                    <button class="btn" onclick="deleteItem('ReyProDesign')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="ReyProDesignPrice" class="amount"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="classeurs" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/lotClasseurs.jpg" title="classeurs" alt="classeurs" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Classeurs à levier Exacompta 2 anneaux PP, Papier A4 Assortiment 3 Unités</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="classeursnumberBasket" onkeyup="totalPrice('classeursnumberBasket', 'classeursPrice', 4.31)">
+                                    <button class="btn" onclick="deleteItem('classeurs')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="classeursPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="archiveBox" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/lotBoites.jpg" title="archiveBox" alt="archiveBox" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Boîte d'archives Office Depot A4 Assortiment - 12 Unités</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="archiveBoxBasket" onkeyup="totalPrice('archiveBoxBasket', 'archiveBoxPrice', 12.59)">
+                                    <button class="btn" onclick="deleteItem('archiveBox')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="archiveBoxPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="folder" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/lotChemises.jpg" title="folder" alt="folder" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Chemise 3 rabats à élastique Exacompta Carte lustrée véritable A4 425 g/m² Assortiment 10 Unités</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="foldernumberBasket" onkeyup="totalPrice('foldernumberBasket', 'folderPrice', 11.75)">
+                                    <button class="btn" onclick="deleteItem('folder')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="folderPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sleeve" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/lotPochettes.jpg" title="sleeve" alt="sleeve" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Pochettes perforées Exacompta Polypropylène Cristal 10 Unités</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="sleeveBasket" onkeyup="totalPrice('sleeveBasket', 'sleevePrice', 17.28)">
+                                    <button class="btn" onclick="deleteItem('sleeve')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="sleevePrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="4ColorFluo" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/styloFluo.jpg" title="4ColorFluo" alt="4ColorFluo" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Stylo à bille rétractable BIC 4 Colours Fluo 0.4 mm Assortiment - 12 Unités</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="4ColorFluoBasket" onkeyup="totalPrice('4ColorFluoBasket', '4ColorFluoPrice', 29.88)">
+                                    <button class="btn" onclick="deleteItem('4ColorFluo')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="4ColorFluoPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="4Color" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/stylo4Couleur.jpg" title="4Color" alt="4Color" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Stylo à bille rétractable BIC 4 Couleurs 0.32 mm Assortiments</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="4ColorBasket" onkeyup="totalPrice('4ColorBasket', '4ColorPrice', 3.83)">
+                                    <button class="btn" onclick="deleteItem('4Color')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="4ColorPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="styloPaperMate" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/styloPaperMate.jpg" title="styloPaperMate" alt="styloPaperMate" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Stylo à bille Paper Mate B045 0.5 mm Assortiment - 8 Unités</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="styloPaperMatenumberBasket" onkeyup="totalPrice('styloPaperMatenumberBasket', 'styloPaperMatePrice', 1.79)">
+                                    <button class="btn" onclick="deleteItem('styloPaperMate')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="styloPaperMatePrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="styloBic" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/bic20Stylo.jpg" title="styloBic" alt="styloBic" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Stylo à bille BIC Cristal 0.30 mm - 20 Unités</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="styloBicnumberBasket" onkeyup="totalPrice('styloBicnumberBasket', 'styloBicPrice', 8.75)">
+                                    <button class="btn" onclick="deleteItem('styloBic')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="styloBicPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="scotch" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/dévidoir.jpg" title="scotch" alt="scotch" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Dévidoir avec 1 ruban adhésif Scotch C60 Base Antidérapante Argenté, noir</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="scotchnumberBasket" onkeyup="totalPrice('scotchnumberBasket', 'scotchPrice', 8.27)">
+                                    <button class="btn" onclick="deleteItem('scotch')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="scotchPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="stapler" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/agrafeuse.jpg" title="stapler" alt="stapler" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Agrafeuse Niceday 5665 20 Feuilles Noir</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="staplernumberBasket" onkeyup="totalPrice('staplernumberBasket', 'staplerPrice', 5.39)">
+                                    <button class="btn" onclick="deleteItem('stapler')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="staplerPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="cutter" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/ciseaux.jpg" title="cutter" alt="cutter" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Ciseaux Office Depot Softgrip Noir, Gris 150 mm</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="cutternumberBasket" onkeyup="totalPrice('cutternumberBasket', 'cutterPrice', 7.43)">
+                                    <button class="btn" onclick="deleteItem('cutter')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="cutterPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="paperClips" class="modal-item">
+                        <div class="row">
+                            <figure class="col-12 col-md-3 col-lg-3 text-center">
+                                <img src="assets/img/trombones.jpg" title="paperClips" alt="paperClips" />
+                            </figure>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <h1>Trombones Office Depot 3 cm Argenté - 100 Unités</h1>
+                                <p><small>Référence : 0391110 </small></p>
+                                <p>
+                                    <label for="quantity">Quantités :</label>
+                                    <input type="number" class="col-2" id="paperClipsnumberBasket" onkeyup="totalPrice('paperClipsnumberBasket', 'paperClipsPrice', 1.19)">
+                                    <button class="btn" onclick="deleteItem('paperClips')">Supprimer</button>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-3 col-lg-3 text-right">
+                                <p>Prix TTC : <strong><span id="paperClipsPrice"></span> €</strong></p>
+                            </div>
+                        </div>
+                    </div>
+    
+
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary">Supprimer le panier</button>
+                    <div class="row">
+                        <p class="text-right">Total : <span id="amountTotal"></span> €</p>
+                    </div>
+                    <button type="button" class="btn btn-secondary" onclick="deleteAll()">Supprimer le panier</button>
                     <button type="button" class="btn btn-primary">Valider le panier</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- fin modal -->
 
     <section id="stationery">
         <div id="claireFontaine">
@@ -165,20 +418,9 @@
                     <p>Prix TTC : <span class="price">26,34 €</span></p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités :</label>
-                        <select id="claireFontaineQuantity" class="col-3" name="claireFontaineQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="claireFontaine" id="claireFontaineNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button"  onclick="addBasket('claireFontaine', 'claireFontaineNumber', 'claireFontainenumberBasket', 'claireFontainePrice', 26.34)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -198,20 +440,9 @@
                     <p>Prix TTC : <span class="price">4,79 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="rametteOfficeDepotQuantity" class="col-3" name="rametteOfficeDepotQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="rametteOfficeDepot" id="rametteOfficeDepoteNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('rametteOfficeDepot', 'rametteOfficeDepoteNumber' , 'rametteOfficeDepotnumberBasket', 'rametteOfficeDepotPrice', 4.79)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -231,20 +462,9 @@
                     <p>Prix TTC : <span class="price">21,54 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="cartonOfficeDepotQuantity" class="col-3" name="cartonOfficeDepotQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="cartonOfficeDepot" id="cartonOfficeDepotNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('cartonOfficeDepot', 'cartonOfficeDepotNumber' , 'cartonOfficeDepotnumberBasket', 'cartonOfficeDepotPrice', 21.54)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -265,25 +485,14 @@
                     <p>Prix TTC : <span class="price">10,43 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="ReyProDesignQuantity" class="col-3" name="ReyProDesignQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="ReyProDesign" id="ReyProDesignNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('ReyProDesign', 'ReyProDesignNumber' , 'ReyProDesignnumberBasket', 'ReyProDesignPrice', 10.43)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
-
     </section>
+
     <section id="archive">
         <div id="classeurs">
             <div class="row">
@@ -298,20 +507,9 @@
                     <p>Prix TTC : <span class="price">4,31 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="classeursQuantity" class="col-3" name="classeursQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="classeurs" id="classeursNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('classeurs', 'classeursNumber' , 'classeursnumberBasket', 'classeursPrice', 4.31)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -331,20 +529,9 @@
                     <p>Prix TTC : <span class="price">12,59 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="archiveBoxQuantity" class="col-3" name="archiveBoxQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="archiveBox" id="archiveBoxNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('archiveBox', 'archiveBoxNumber' , 'archiveBoxBasket', 'archiveBoxPrice', 12.59)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -364,20 +551,9 @@
                     <p>Prix TTC : <span class="price">11,75 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="folderQuantity" class="col-3" name="folderQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="folder" id="folderNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('folder', 'folderNumber' , 'foldernumberBasket', 'folderPrice', 11.75)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -396,20 +572,9 @@
                     <p>Prix TTC : <span class="price">17,28 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="sleeveQuantity" class="col-3" name="sleeveQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="sleeve" id="sleeveNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('sleeve', 'sleeveNumber' , 'sleeveBasket', 'sleevePrice', 17.28)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -429,20 +594,9 @@
                     <p>Prix TTC : <span class="price">29,88 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="4ColorFluoQuantity" class="col-3" name="4ColorFluoQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="pen" id="4ColorFluoNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('4ColorFluo', '4ColorFluoNumber' , '4ColorFluoBasket', '4ColorFluoPrice', 29.88)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -461,20 +615,9 @@
                     <p>Prix TTC : <span class="price">3,83 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="4ColorQuantity" class="col-3" name="4ColorQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="4Color" id="4ColorNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('4Color', '4ColorNumber' , '4ColorBasket', '4ColorPrice', 3.83)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -493,20 +636,9 @@
                     <p>Prix TTC : <span class="price">1,79 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="styloPaperMateQuantity" class="col-3" name="styloPaperMateQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="styloPaperMate" id="styloPaperMateNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('styloPaperMate', 'styloPaperMateNumber' , 'styloPaperMatenumberBasket', 'styloPaperMatePrice', 1.79)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -526,26 +658,15 @@
                     <p>Prix TTC : <span class="price">8,75 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="styloBicQuantity" class="col-3" name="styloBicQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="styloBic" id="styloBicNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('styloBic', 'styloBicNumber' , 'styloBicnumberBasket', 'styloBicPrice', 8.75)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </section>
-    <section id="supplies">
 
+    <section id="supplies">
         <div id="scotch">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
@@ -560,20 +681,9 @@
                     <p>Prix TTC : <span class="price">8,27 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="scotchQuantity" class="col-3" name="scotchQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="scotch" id="scotchNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('scotch', 'scotchNumber' , 'scotchnumberBasket', 'scotchPrice', 8.27)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -593,29 +703,18 @@
                     <p>Prix TTC : <span class="price">5,39 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="staplerQuantity" class="col-3" name="staplerQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="stapler" id="staplerNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('stapler', 'staplerNumber' , 'staplernumberBasket', 'staplerPrice', 5.39)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
         <p class="black-divider"></p>
 
-        <div id="styloPaperMate">
+        <div id="cutter">
             <div class="row">
                 <figure class="col-12 col-md-3 col-lg-3 text-center">
-                    <img src="assets/img/styloPaperMate.jpg" title="styloPaperMate" alt="styloPaperMate" />
+                    <img src="assets/img/ciseaux.jpg" title="ciseaux" alt="ciseaux" />
                 </figure>
                 <div class="col-12 col-md-6 col-lg-6">
                     <h1>Ciseaux Office Depot Softgrip Noir, Gris 150 mm</h1>
@@ -626,20 +725,9 @@
                     <p>Prix TTC : <span class="price">7,43 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="styloPaperMateQuantity" class="col-3" name="styloPaperMateQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="cutter" id="cutterNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('cutter', 'cutterNumber' , 'cutternumberBasket', 'cutterPrice', 7.43)">Ajouter au panier</button>
                 </div>
             </div>
         </div>
@@ -659,20 +747,9 @@
                     <p>Prix TTC : <span class="price">1,19 €</p>
                     <div class="row d-flex justify-content-end">
                         <label class="col-6" for="quantity">Quantités : </label>
-                        <select id="paperClipsQuantity" class="col-3" name="paperClipsQuantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                        <input type="number" name="paperClips" id="paperClipsNumber">
                     </div>
-                    <button type="button">Ajouter au panier</button>
+                    <button type="button" onclick="addBasket('paperClips', 'paperClipsNumber' , 'paperClipsnumberBasket', 'paperClipsPrice', 1.19)">Ajouter au panier</button>
                 </div>
             </div>
         </div>

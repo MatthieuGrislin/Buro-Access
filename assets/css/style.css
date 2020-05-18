@@ -111,3 +111,6 @@ font-size: 20px;
 .modal-body .btn {
     padding-bottom: 21px;
 }
+.modal-body .modal-item {
+    display: none;
+}
