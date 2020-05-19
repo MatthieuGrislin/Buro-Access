@@ -7,9 +7,6 @@
 .navbar-nav {
    margin: 0 auto;
 }
-/*.nav-item {
-    margin: 0 15px;
-}*/
 .nav-link {
     color: #000;
     font-size: 1.5em;
@@ -59,9 +56,11 @@ footer p {
     margin: 0;
     padding: 0;
 }
+/*section*/
 section {
     display: none;
     margin-top: 30px;
+    margin-right: 70px;
 }
 #accueil {
     display: block;
@@ -94,6 +93,7 @@ font-size: 20px;
     width: 490px;
     margin: 0 auto;
 }
+/*caroussel*/
 .carousel-control-prev-icon, .carousel-control-next-icon {
     height: 50px;
     width: 100px;
@@ -102,6 +102,7 @@ font-size: 20px;
     background-size: 100%, 100%;
     border-radius: 50%;
 }
+/*Panner*/
 .modal-body h1 {
     font-size: 20px;
 }
@@ -121,9 +122,18 @@ font-size: 20px;
     height: auto;
     width: 50px;
 }
-/*@media screen and (max-width: 374px){
-    .displayProduct {
+@media screen and (max-width: 576px){
+    .img-carousel {
         height: 150px;
         width: 150px;
     }
-}*/
+    #accueil h2 {
+        font-size: 1.5rem;
+    }
+    #accueil {
+        height: 100vh;
+    }
+    section {
+        margin-right: 0;
+    }
+}

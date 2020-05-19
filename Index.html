@@ -30,7 +30,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#" onclick="HideAndShow('4')">Petites fournitures</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mx-auto">
                     <button type="button" class="btn text-center" data-toggle="modal" data-target="#exampleModal"><img src="assets/img/basket.png" id="basketIcon" /></button>
                 </li>
             </ul>
@@ -38,19 +38,16 @@
     </nav>
     <section class="container" id="accueil">
         <h1 class="text-center titreIndex">Bienvenue chez Buro'Access</h1>
-        <div class="row promo">
-        </div>
-        <div class="row displayProduct">
             <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block" src="assets/img/ClaireFontaineRamette.jpg" alt="Ramette Papier">
+                        <img class="d-block img-carousel mx-auto" src="assets/img/claireFontaineRamette.jpg" alt="Ramette Papier">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block" src="assets/img/bic4Color.jpg" alt="Second slide">
+                        <img class="d-block img-carousel mx-auto" src="assets/img/bic4Color.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block" src="assets/img/agrafeuseCarousel.jpg" alt="Third slide">
+                        <img class="d-block img-carousel mx-auto" src="assets/img/agrafeuseCarousel.jpg" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -62,7 +59,6 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-        </div>
         <h2 class="text-center textIndex">Buro'Access est une entreprise familiale qui se veut aussi proche des particuliers que des professionnels.</h2>
         <h2 class="text-center">Nous vous fournissons un grand choix de produits et d'accessoires pour les besoins du quotidien de toutes les entreprises.</h2>
         <h2 class="text-center">Buro'Access c'est avant tout du choix, de la qualité et des prix bas toute l'année.</h2>
@@ -89,7 +85,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="claireFontainenumberBasket" onkeyup="totalPrice('claireFontainenumberBasket', 'claireFontainePrice', 26.34)">
-                                    <button class="btn" onclick="deleteItem('claireFontaine')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('claireFontaine', 'claireFontainePrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -108,7 +104,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="rametteOfficeDepotnumberBasket" onkeyup="totalPrice('rametteOfficeDepotnumberBasket', 'rametteOfficeDepotPrice', 4.79)">
-                                    <button class="btn" onclick="deleteItem('rametteOfficeDepot')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('rametteOfficeDepot', 'rametteOfficeDepotPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -127,7 +123,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="cartonOfficeDepotnumberBasket" onkeyup="totalPrice('cartonOfficeDepotnumberBasket', 'cartonOfficeDepotPrice', 21.54)">
-                                    <button class="btn" onclick="deleteItem('cartonOfficeDepot')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('cartonOfficeDepot', 'cartonOfficeDepotPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -146,7 +142,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="ReyProDesignnumberBasket" onkeyup="totalPrice('ReyProDesignnumberBasket', 'ReyProDesignPrice', 10.43)">
-                                    <button class="btn" onclick="deleteItem('ReyProDesign')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('ReyProDesign', 'ReyProDesignPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -165,7 +161,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="classeursnumberBasket" onkeyup="totalPrice('classeursnumberBasket', 'classeursPrice', 4.31)">
-                                    <button class="btn" onclick="deleteItem('classeurs')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('classeurs', 'classeursPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -184,7 +180,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="archiveBoxBasket" onkeyup="totalPrice('archiveBoxBasket', 'archiveBoxPrice', 12.59)">
-                                    <button class="btn" onclick="deleteItem('archiveBox')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('archiveBox', 'archiveBoxPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -203,7 +199,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="foldernumberBasket" onkeyup="totalPrice('foldernumberBasket', 'folderPrice', 11.75)">
-                                    <button class="btn" onclick="deleteItem('folder')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('folder', 'folderPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -222,7 +218,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="sleeveBasket" onkeyup="totalPrice('sleeveBasket', 'sleevePrice', 17.28)">
-                                    <button class="btn" onclick="deleteItem('sleeve')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('sleeve', 'sleevePrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -241,7 +237,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="4ColorFluoBasket" onkeyup="totalPrice('4ColorFluoBasket', '4ColorFluoPrice', 29.88)">
-                                    <button class="btn" onclick="deleteItem('4ColorFluo')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('4ColorFluo', '4ColorFluoPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -260,7 +256,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="4ColorBasket" onkeyup="totalPrice('4ColorBasket', '4ColorPrice', 3.83)">
-                                    <button class="btn" onclick="deleteItem('4Color')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('4Color', '4ColorPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -279,7 +275,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="styloPaperMatenumberBasket" onkeyup="totalPrice('styloPaperMatenumberBasket', 'styloPaperMatePrice', 1.79)">
-                                    <button class="btn" onclick="deleteItem('styloPaperMate')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('styloPaperMate', 'styloPaperMatePrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -298,7 +294,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="styloBicnumberBasket" onkeyup="totalPrice('styloBicnumberBasket', 'styloBicPrice', 8.75)">
-                                    <button class="btn" onclick="deleteItem('styloBic')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('styloBic', 'styloBicPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -317,7 +313,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="scotchnumberBasket" onkeyup="totalPrice('scotchnumberBasket', 'scotchPrice', 8.27)">
-                                    <button class="btn" onclick="deleteItem('scotch')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('scotch', 'scotchPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -336,7 +332,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="staplernumberBasket" onkeyup="totalPrice('staplernumberBasket', 'staplerPrice', 5.39)">
-                                    <button class="btn" onclick="deleteItem('stapler')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('stapler', 'staplerPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -355,7 +351,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="cutternumberBasket" onkeyup="totalPrice('cutternumberBasket', 'cutterPrice', 7.43)">
-                                    <button class="btn" onclick="deleteItem('cutter')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('cutter', 'cutterPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -374,7 +370,7 @@
                                 <p>
                                     <label for="quantity">Quantités :</label>
                                     <input type="number" class="col-2" id="paperClipsnumberBasket" onkeyup="totalPrice('paperClipsnumberBasket', 'paperClipsPrice', 1.19)">
-                                    <button class="btn" onclick="deleteItem('paperClips')">Supprimer</button>
+                                    <button class="btn" onclick="deleteItem('paperClips', 'paperClipsPrice')">Supprimer</button>
                                 </p>
                             </div>
                             <div class="col-12 col-md-3 col-lg-3 text-right">
@@ -731,7 +727,7 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer class="mt-3">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 ">
